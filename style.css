@@ -10,3 +10,11 @@
 #footer:hover::after{
   content: "Cheers ! You hovered over my footer"
 }
+.modal-dialog{
+    width:90%;
+}
+.ii{
+    display:inline-block;
+    width:45%;
+
+}
