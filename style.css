@@ -6,12 +6,16 @@ background-image: radial-gradient(142% 91% at -6% 74%, #FF0049FF 1%, #FF000000 9
 #header{
   color:white;
   font-size:23.5px;
+  width:100%;
+  text-align:center;
 }
 #footer{
   bottom:0;
   background-color:grey;
   position:fixed;
   color:white;
+  width:100%;
+  text-align:right;
 }
 #footer:hover::after{
   content: "Cheers ! You hovered over my footer"
