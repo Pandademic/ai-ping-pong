@@ -1,4 +1,12 @@
-body
-{
-
+#header{
+  color:white;
+  font-size:23.5px;
+  padding-left:2rem;
+}
+#footer{
+  bottom:0;
+  background-color:grey;
+}
+#footer:hover::after{
+  content: "Cheers ! You hovered over my footer"
 }
