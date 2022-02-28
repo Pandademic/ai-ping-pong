@@ -20,7 +20,7 @@ background-image: radial-gradient(142% 91% at -6% 74%, #FF0049FF 1%, #FF000000 9
 #footer:hover::after{
   content: "🍻 Cheers ! You hovered over my footer. Here's a tip , try the header too!"
 }
-#header:hover::before {
+#header:hover::after {
    content: "🤔Are you following my tips or is this a random ocurence ?"
 }
 .modal-dialog{
