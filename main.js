@@ -20,7 +20,7 @@ var ball = {
     dx:3,
     dy:3
 }
-var screenWidth = (window.innerWidth > 0) ? window.innerWidth : screen.width;
+var screenWidth = (window.innerWidth > 0) ? window.innerWidth - 125 : screen.width;
 function setup(){
   var canvas =  createCanvas(screenWidth,600);
 }
