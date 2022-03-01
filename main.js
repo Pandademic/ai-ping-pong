@@ -20,9 +20,12 @@ var ball = {
     dx:3,
     dy:3
 }
-var screenWidth = (window.innerWidth > 0) ? window.innerWidth - 125 : screen.width;
+var screenWidth = creen.width;
+var screenHeight = window.innerWidth ;
 function setup(){
-  var canvas =  createCanvas(screenWidth,600);
+  var canvas =  createCanvas(screenWidth,screenHeight);
+  canvas.parent("game_div")
+  var camera = createCapture(VIDEO)   
 }
 
 
@@ -50,8 +53,8 @@ function draw(){
    
    
     //pc computer paddle
-    fill("#FFA500");
-    stroke("#FFA500");
+    fill("#48cae4");
+    stroke("#48cae4");
    var paddle2y =ball.y-paddle2Height/2;  rect(paddle2Y,paddle2y,paddle2,paddle2Height,100);
     
     //function midline call
@@ -131,8 +134,8 @@ if(pcscore ==4){
     fill("white");
     stroke("white");
     textSize(25)
-    text("Game Over!☹☹",width/2,height/2);
-    text("Reload The Page!",width/2,height/2+30)
+    text("Game Over!😢😢",width/2,height/2);
+    text("Reload The Page To play again !",width/2,height/2+30)
     noLoop();
     pcscore = 0;
 }
