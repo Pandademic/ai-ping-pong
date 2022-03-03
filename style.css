@@ -1,13 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Hubballi&display=swap');
 body{
   background-size: 100% 100%;
-background-position: 0px 0px,0px 0px,0px 0px,0px 0px,0px 0px;
-background-image: radial-gradient(142% 91% at -6% 74%, #FF0049FF 1%, #FF000000 99%),radial-gradient(49% 81% at 45% 47%, #FFE20345 0%, #073AFF00 100%),radial-gradient(142% 91% at 83% 7%, #FFDB00FF 1%, #FF000000 99%),radial-gradient(113% 91% at 17% -2%, #FF5A00FF 1%, #FF000000 99%),radial-gradient(142% 91% at 111% 84%, #FF7000FF 0%, #FF0000FF 100%);
+  background-position: 0px 0px,0px 0px,0px 0px,0px 0px,0px 0px;
+  background-image: radial-gradient(142% 91% at -6% 74%, #FF0049FF 1%, #FF000000 99%),radial-gradient(49% 81% at 45% 47%, #FFE20345 0%, #073AFF00 100%),radial-gradient(142% 91% at 83% 7%, #FFDB00FF 1%, #FF000000 99%),radial-gradient(113% 91% at 17% -2%, #FF5A00FF 1%, #FF000000 99%),radial-gradient(142% 91% at 111% 84%, #FF7000FF 0%, #FF0000FF 100%);
 }
 #header{
   color:white;
   font-size:23.5px;
   width:100%;
   text-align:center;
+  font-family: 'Hubballi', cursive;
 }
 #footer{
   bottom:0;
@@ -19,9 +21,6 @@ background-image: radial-gradient(142% 91% at -6% 74%, #FF0049FF 1%, #FF000000 9
 }
 #footer:hover::after{
   content: "🍻 Cheers ! You hovered over my footer. Here's a tip , try the header too!"
-}
-#header:hover::after {
-   content: "🤔Are you following my tips or is this a random ocurence ?"
 }
 .modal-dialog{
     width:90%;
