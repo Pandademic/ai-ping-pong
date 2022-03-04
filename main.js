@@ -20,20 +20,21 @@ var ball = {
     dx:3,
     dy:3
 }
-var screenWidth = screen.width;
-var screenHeight = window.innerWidth ;
 function setup(){
-  var canvas =  createCanvas(800,screenHeight);
+  var canvas =  createCanvas(640,800);
   canvas.parent("game_div")
   var camera = createCapture(VIDEO);
   camera.parent("camera_slot")
-  posenet = ml5.objectDetector('posenet', modelLoaded);
+  camera.size(640,6800)
+  poseNet = ml5.poseNet(camera, modelLoaded);
+  poseNet.on('pose',gotPoses);
 }
 function modelLoaded(){
       console.log("Model Loaded!")
-
 }
-
+function gotPoses(){
+    console.log("have results")
+}
 
 function draw(){
 
