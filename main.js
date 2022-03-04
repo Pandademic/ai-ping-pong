@@ -23,9 +23,8 @@ var ball = {
 function setup(){
   var canvas =  createCanvas(640,800);
   canvas.parent("game_div")
-  var camera = createCapture(VIDEO);
-  camera.parent("camera_slot")
-  camera.size(640,6800)
+  var camera = createCapture(VIDEO)
+  camera.hide()
   poseNet = ml5.poseNet(camera, modelLoaded);
   poseNet.on('pose',gotPoses);
 }
