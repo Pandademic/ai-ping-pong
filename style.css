@@ -11,6 +11,7 @@ body{
   text-align:center;
   font-family: 'Hubballi', cursive;
   position:fixed;
+  height:15%;
 }
 #footer{
   background-color:grey;
