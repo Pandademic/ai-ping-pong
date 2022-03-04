@@ -30,6 +30,3 @@ body{
     display:inline-block;
     width:45%;
 }
-#game_div,#camera_slot{
-  float:left;
-}
