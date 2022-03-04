@@ -142,6 +142,7 @@ if(pcscore ==4){
     textSize(25)
     text("Game Over!😢😢",width/2,height/2);
     text("Reload The Page To play again !",width/2,height/2+30)
+    window.alert("Game Over!😢😢 Reload The Page To play again !")
     noLoop();
     pcscore = 0;
 }
