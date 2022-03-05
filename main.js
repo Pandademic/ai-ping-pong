@@ -31,8 +31,11 @@ function setup(){
 function modelLoaded(){
       console.log("Model Loaded!")
 }
-function gotPoses(){
+function gotPoses(results){
     console.log("have results")
+    wristX = results[0].pose.wrist.x ;
+    wristY = results[0].pose.wrist.y ;
+    circle(wirstX,wristY,25)
 }
 
 function draw(){
