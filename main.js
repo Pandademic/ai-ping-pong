@@ -1,5 +1,8 @@
 
 /*created by prashant shukla , modified by atharv gupte */
+function setStatus(status){
+    document.getElementById("status").innerHTML= status
+}
 
 var paddle2 =10 , paddle1=10;
 
@@ -21,6 +24,7 @@ var ball = {
     dy:3
 }
 function setup(){
+  setStatus('<div class="mdl-spinner mdl-js-spinner is-active"></div> , Target: Video')  
   var canvas =  createCanvas(640,800);
   canvas.parent("game_div")
   var camera = createCapture(VIDEO)
@@ -29,6 +33,7 @@ function setup(){
   poseNet.on('pose',gotPoses);
 }
 function modelLoaded(){
+       setStatus("model loaded")
       console.log("Model Loaded!")
 }
 function gotPoses(results){
@@ -39,7 +44,7 @@ function gotPoses(results){
 }
 
 function draw(){
-
+ setStatus("drawing")
  background(0); 
 
  fill("black");
