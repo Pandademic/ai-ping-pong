@@ -11,7 +11,7 @@ body{
   text-align:center;
   font-family: 'Hubballi', cursive;
   position:fixed;
-  height:15%;
+  height:8%;
 }
 #footer{
   background-color:grey;
@@ -21,7 +21,7 @@ body{
   font-family: 'Hubballi', cursive;
 }
 #footer:hover::after{
-  content: "🍻 Cheers ! You hovered over my footer. Here's a tip , try the header too!"
+  content: "🍻 Cheers ! You hovered over my footer.Thanks!"
 }
 .modal-dialog{
     width:90%;
