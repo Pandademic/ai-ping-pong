@@ -33,7 +33,7 @@ function setup(){
   poseNet.on('pose',gotPoses);
 }
 function modelLoaded(){
-       setStatus("model loaded")
+      setStatus("model loaded")
       console.log("Model Loaded!")
 }
 function gotPoses(results){
@@ -43,7 +43,7 @@ function gotPoses(results){
     circle(wirstX,wristY,25)
 }
 
-function draw(){
+function start(){
  setStatus("drawing")
  background(0); 
 
