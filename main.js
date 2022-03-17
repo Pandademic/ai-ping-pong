@@ -47,44 +47,46 @@ function start(){
 }
 function draw(){
    if(start == true){
-     setStatus("drawing");
-     background(0); 
+     while(true){
+         setStatus("drawing");
+         background(0); 
 
-     fill("black");
-     stroke("black");
-     rect(680,0,20,700);
+         fill("black");
+         stroke("black");
+         rect(680,0,20,700);
 
-     fill("black");
-     stroke("black");
-     rect(0,0,20,700);
+         fill("black");
+         stroke("black");
+         rect(0,0,20,700);
 
-       //funtion paddleInCanvas call 
-       paddleInCanvas();
+           //funtion paddleInCanvas call 
+           paddleInCanvas();
 
-       //left paddle
-       fill(250,0,0);
-        stroke(0,0,250);
-        strokeWeight(0.5);
-       paddle1Y = mouseY; 
-       rect(paddle1X,paddle1Y,paddle1,paddle1Height,100);
+           //left paddle
+           fill(250,0,0);
+            stroke(0,0,250);
+            strokeWeight(0.5);
+           paddle1Y = mouseY; 
+           rect(paddle1X,paddle1Y,paddle1,paddle1Height,100);
 
 
-        //pc computer paddle
-        fill("#48cae4");
-        stroke("#48cae4");
-       var paddle2y =ball.y-paddle2Height/2;  rect(paddle2Y,paddle2y,paddle2,paddle2Height,100);
+            //pc computer paddle
+            fill("#48cae4");
+            stroke("#48cae4");
+           var paddle2y =ball.y-paddle2Height/2;  rect(paddle2Y,paddle2y,paddle2,paddle2Height,100);
 
-        //function midline call
-        midline();
+            //function midline call
+            midline();
 
-        //funtion drawScore call 
-       drawScore();
+            //funtion drawScore call 
+           drawScore();
 
-       //function models call  
-       models();
+           //function models call  
+           models();
 
-       //function move call which in very important
-        move();
+           //function move call which in very important
+            move();
+     }
     }
 }
 
