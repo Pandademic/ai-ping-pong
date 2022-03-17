@@ -42,10 +42,12 @@ function gotPoses(results){
     wristY = results[0].pose.wrist.y ;
     circle(wirstX,wristY,25)
 }
-
 function start(){
- while(true){
-     setStatus("drawing")
+    start = true;
+}
+function draw(){
+   if(start == true){
+     setStatus("drawing");
      background(0); 
 
      fill("black");
