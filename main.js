@@ -46,7 +46,7 @@ function start(){
 }
 function draw(){
          if(status != true){
-               break
+              setTimeout(() => {  console.log("World!"); }, 2000);
          }
          setStatus("drawing");
          background(0); 
