@@ -45,6 +45,9 @@ function start(){
     start = true;
 }
 function draw(){
+         if(status != true){
+               break
+         }
          setStatus("drawing");
          background(0); 
 
@@ -70,7 +73,7 @@ function draw(){
             //pc computer paddle
             fill("#48cae4");
             stroke("#48cae4");
-           var paddle2y =ball.y-paddle2Height/2;  rect(paddle2Y,paddle2y,paddle2,paddle2Height,100);
+           var paddle2y =ball.y-paddle2Height/2;  rect(paddle2Y,paddle2Y,paddle2,paddle2Height,100);
 
             //function midline call
             midline();
@@ -89,7 +92,7 @@ function draw(){
 
 //function reset when ball does notcame in the contact of padde
 function reset(){
-   ball.x = width/2+100,
+   ball.x = width+100,
    ball.y = height/2+100;
    ball.dx=3;
    ball.dy =3;
@@ -178,6 +181,6 @@ function paddleInCanvas(){
     mouseY=height-paddle1Height;
   }
   if(mouseY < 0){
-    mouseY =0;
+    mouseY = 0;
   }  
 }
