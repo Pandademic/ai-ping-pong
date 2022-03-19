@@ -24,7 +24,6 @@ var ball = {
     dy:3
 }
 function setup(){
-  setStatus('<div class="mdl-spinner mdl-js-spinner is-active"></div> ,      Target: Video')  
   var canvas =  createCanvas(640,800);
   canvas.parent("game_div")
   var camera = createCapture(VIDEO)
@@ -46,8 +45,6 @@ function start(){
     start = true;
 }
 function draw(){
-   if(start == true){
-     while(true){
          setStatus("drawing");
          background(0); 
 
@@ -86,8 +83,6 @@ function draw(){
 
            //function move call which in very important
             move();
-     }
-    }
 }
 
 
@@ -108,7 +103,7 @@ function midline(){
     var y = 0;
     fill("white");
     stroke(0);
-    rect(width/2,y+i,10,480);
+    rect(width,y+i,10,480);
     }
 }
 
