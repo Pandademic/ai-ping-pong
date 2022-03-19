@@ -45,9 +45,7 @@ function start(){
     start = true;
 }
 function draw(){
-         if(status != true){
-              setTimeout(() => {  console.log("World!"); }, 2000);
-         }
+    if(start != null){
          setStatus("drawing");
          background(0); 
 
@@ -86,6 +84,10 @@ function draw(){
 
            //function move call which in very important
             move();
+    }
+    else{
+        break
+    }
 }
 
 
