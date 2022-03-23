@@ -46,6 +46,7 @@ function start(){
 }
 function draw(){
     if(start == "true"){
+         setStatus("starting ui draw loop")
          setStatus("drawing");
          background(0); 
 
@@ -84,6 +85,8 @@ function draw(){
 
            //function move call which in very important
             move();
+            
+            setStatus("done with main draw loop")
     }
     else{
          textAlign(CENTER);
@@ -91,6 +94,7 @@ function draw(){
         fill("white");
         stroke(250,0,0)
         text("Press Start",100,50)
+  
     }
 }
 
