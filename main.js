@@ -42,10 +42,10 @@ function gotPoses(results){
     circle(wirstX,wristY,25)
 }
 function start(){
-    start = true;
+    start = "start";
 }
 function draw(){
-    if(start != null){
+    if(start == "true"{
          setStatus("drawing");
          background(0); 
 
@@ -86,7 +86,11 @@ function draw(){
             move();
     }
     else{
-        break
+         textAlign(CENTER);
+        textSize(20);
+        fill("white");
+        stroke(250,0,0)
+        text("Press Start",100,50)
     }
 }
 
