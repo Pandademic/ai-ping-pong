@@ -45,7 +45,7 @@ function start(){
     start = "start";
 }
 function draw(){
-    if(start == "true"{
+    if(start == "true"){
          setStatus("drawing");
          background(0); 
 
