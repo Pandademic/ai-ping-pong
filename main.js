@@ -1,4 +1,3 @@
-
 /*created by prashant shukla , modified by atharv gupte */
 function setStatus(status){
     document.getElementById("status").innerHTML= status
@@ -27,7 +26,7 @@ function setup(){
   var canvas =  createCanvas(640,800);
   canvas.parent("game_div")
   var camera = createCapture(VIDEO)
-  camera.hide()
+  //camera.hide()
   poseNet = ml5.poseNet(camera, modelLoaded);
   poseNet.on('pose',gotPoses);
 }
