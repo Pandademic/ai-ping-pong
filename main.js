@@ -1,6 +1,7 @@
 /*
 created by prashant shukla , modified by atharv gupte
-*///utiliy func's
+*/
+//utiliy func's
 function setStatus(status){
     document.getElementById("status").innerHTML= status
 }
