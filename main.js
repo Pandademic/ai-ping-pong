@@ -46,7 +46,7 @@ function start(){
     start = "start";
 }
 function draw(){
-    if(start == "true"){
+    if(start == "start"){
          setStatus("starting ui draw loop")
          setStatus("drawing");
          background(0); 
