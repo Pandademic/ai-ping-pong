@@ -1,16 +1,16 @@
 /*
 created by prashant shukla , modified by atharv gupte
-*/
+*///utiliy func's
 function setStatus(status){
     document.getElementById("status").innerHTML= status
 }
-
+// variables
 var paddle2 =10 , paddle1=10;
 
 var paddle1X = 10,paddle1Height = 110;
 var paddle2Y = 685,paddle2Height = 70;
 
-var score1 = 0, score2 =0;
+var score1 = 0, score2 = 0;
 var paddle1Y;
 
 var  playerscore = 0;
@@ -24,6 +24,7 @@ var ball = {
     dx:3,
     dy:3
 }
+//loading
 function setup(){
   var canvas =  createCanvas(640,800);
   canvas.parent("game_div")
@@ -34,14 +35,15 @@ function setup(){
 }
 function modelLoaded(){
       setStatus("model loaded")
-      console.log("Model Loaded!")
+      console.info("Model Loaded!")
 }
 function gotPoses(results){
-    console.log("have results")
+    console.info("%cI have results","font-size: 10px; margin: 30px 0; padding: 5px 20px; color: #fff; background: linear-gradient(0deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);"))
     wristX = results[0].pose.wrist.x ;
     wristY = results[0].pose.wrist.y ;
     circle(wirstX,wristY,25)
 }
+//onlick func
 function start(){
     start = "start";
 }
@@ -85,12 +87,12 @@ function draw(){
            models();
 
            //function move call which in very important
-            move();
+      move();
             
-            setStatus("done with main draw loop")
+     setStatus("done with main draw loop")
     }
     else{
-         textAlign(CENTER);
+        textAlign(CENTER);
         textSize(20);
         fill("white");
         stroke(250,0,0)
