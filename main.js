@@ -39,7 +39,7 @@ function modelLoaded(){
       console.info("Model Loaded!")
 }
 function gotPoses(results){
-    console.info("%cI have results","font-size: 10px; margin: 30px 0; padding: 5px 20px; color: #fff; background: linear-gradient(0deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);"))
+    console.info("%cI have results","font-size: 10px; margin: 30px 0; padding: 5px 20px; color: #fff; background: linear-gradient(0deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);")
     wristX = results[0].pose.wrist.x ;
     wristY = results[0].pose.wrist.y ;
     circle(wirstX,wristY,25)
