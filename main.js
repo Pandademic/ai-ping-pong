@@ -3,7 +3,7 @@ created by prashant shukla , modified by atharv gupte
 */
 //utiliy func's
 function setStatus(status){
-    document.getElementById("status").innerHTML= status
+    document.getElementById("status").innerHTML= "Status:"+status
 }
 // variables
 var paddle2 =10 , paddle1=10;
@@ -83,10 +83,8 @@ function draw(){
 
             //funtion drawScore call 
            drawScore();
-
            //function models call  
-           models();
-
+           //models();
            //function move call which in very important
       move();
             
@@ -131,9 +129,9 @@ function drawScore(){
     textSize(20);
     fill("white");
     stroke(250,0,0)
-    text("Player:",100,50)
+    text("Player:  ",100,50)
     text(playerscore,140,50);
-    text("Computer:",500,50)
+    text("Computer:  ",500,50)
     text(pcscore,555,50)
 }
 
@@ -167,6 +165,7 @@ if(pcscore ==4){
     stroke("white");
     textSize(25)
     text("Game Over!😢😢",width/2,height/2);
+    
     text("Reload The Page To play again !",width/2,height/2+30)
     window.alert("Game Over!😢😢 Reload The Page To play again !")
     noLoop();
@@ -183,13 +182,13 @@ function models(){
     textSize(18);
     fill(255);
     noStroke();
-    text("Width:"+width,135,15);
-    text("Speed:"+abs(ball.dx),50,15);
+    text("Width:"+width+"\n",135,15);
+    text("Speed:"+abs(ball.dx)+"\n",50,15);
     text("Height:"+height,235,15)
 }
 
 
-//this function help to not go te paddle out of canvas
+//this function helps to not go te paddle out of canvas
 function paddleInCanvas(){
   if(mouseY+paddle1Height > height){
     mouseY=height-paddle1Height;
