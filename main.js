@@ -163,9 +163,9 @@ function move(){
        ball.dx=-ball.dx-0.5;
    }
   if (ball.x-2.5*ball.r/2< 0){
-             hit.play();
   if (ball.y >= paddle1Y&& ball.y <= paddle1Y + paddle1Height) {
     ball.dx = -ball.dx+0.5; 
+                   hit.play();
   }
   else{
     pcscore++;
