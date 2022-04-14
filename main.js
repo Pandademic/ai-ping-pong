@@ -35,8 +35,8 @@ function setup(){
   //camera.hide()
   poseNet = ml5.poseNet(camera, modelLoaded);
   poseNet.on('pose',gotPoses);
-  missed = loadSound("missed.wav");
-  hit = loadSound("ball_touch_paddel.wav");
+  missed = loadSound("missed.mp3");
+  hit = loadSound("hit.mp3");
 }
 function modelLoaded(){
       setStatus("model loaded")
