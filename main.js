@@ -119,6 +119,7 @@ function draw(){
 
 //function reset when ball does notcame in the contact of padde
 function reset(){
+   hit.stop(); 
    missed.play();
    ball.x = width+100,
    ball.y = height/2+100;
