@@ -25,6 +25,8 @@ var ball = {
     dx:3,
     dy:3
 }
+var missed = "";
+var hit = "";
 //loading
 function setup(){
   var canvas =  createCanvas(640,800);
@@ -33,6 +35,8 @@ function setup(){
   //camera.hide()
   poseNet = ml5.poseNet(camera, modelLoaded);
   poseNet.on('pose',gotPoses);
+  missed = loadSound("missed.wav");
+  hit = loadSound("ball_touch_paddel.wav");
 }
 function modelLoaded(){
       setStatus("model loaded")
@@ -160,7 +164,9 @@ function move(){
   if (ball.y >= paddle1Y&& ball.y <= paddle1Y + paddle1Height) {
     ball.dx = -ball.dx+0.5; 
   }
+  hit.play();
   else{
+    missed.play();
     pcscore++;
     reset();
     navigator.vibrate(100);
