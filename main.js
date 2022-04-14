@@ -48,6 +48,16 @@ function gotPoses(results){
 function start(){
     start = "start";
 }
+function restart(){
+    console.log("RESETTING")
+    pcscore = 0;
+    playerscore = 0;
+    navigator.vibrate(100);
+    setStatus("resetting...")
+    clear();
+    setStatus("done!")
+    loop();
+}
 function draw(){
     if(start == "start"){
          setStatus("starting ui draw loop")
@@ -134,16 +144,6 @@ function drawScore(){
     text("Computer:  ",500,50)
     text(pcscore,555,50)
 }
-function restart(){
-    pcscore = 0;
-    playerscore = 0;
-    navigator.vibrate(100);
-    setStatus("resetting...")
-    clear();
-    setStatus("done!")
-    loop();
-}
-
 //very important function of this game
 function move(){
    fill(50,350,0);
