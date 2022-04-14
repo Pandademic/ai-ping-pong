@@ -82,8 +82,8 @@ function draw(){
 
            //left paddle
            fill(250,0,0);
-            stroke(0,0,250);
-            strokeWeight(0.5);
+           stroke(0,0,250);
+           strokeWeight(0.5);
            paddle1Y = mouseY; 
            rect(paddle1X,paddle1Y,paddle1,paddle1Height,100);
 
@@ -119,6 +119,7 @@ function draw(){
 
 //function reset when ball does notcame in the contact of padde
 function reset(){
+   missed.play();
    ball.x = width+100,
    ball.y = height/2+100;
    ball.dx=3;
@@ -164,9 +165,7 @@ function move(){
   if (ball.y >= paddle1Y&& ball.y <= paddle1Y + paddle1Height) {
     ball.dx = -ball.dx+0.5; 
   }
-  hit.play();
   else{
-    missed.play();
     pcscore++;
     reset();
     navigator.vibrate(100);
