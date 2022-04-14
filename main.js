@@ -44,9 +44,10 @@ function gotPoses(results){
     wristY = results[0].pose.wrist.y ;
     circle(wirstX,wristY,25)
 }
-//onlick func
+//onclick func
 function start(){
     start = "start";
+    console.log("START HAPPENED")
 }
 function restart(){
     console.log("RESETTING")
