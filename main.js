@@ -134,7 +134,15 @@ function drawScore(){
     text("Computer:  ",500,50)
     text(pcscore,555,50)
 }
-
+function restart(){
+    pcscore = 0;
+    playerscore = 0;
+    navigator.vibrate(100);
+    setStatus("resetting...")
+    clear();
+    setStatus("done!")
+    loop();
+}
 
 //very important function of this game
 function move(){
@@ -145,7 +153,7 @@ function move(){
    ball.x = ball.x + ball.dx;
    ball.y = ball.y + ball.dy;
    if(ball.x+ball.r>width-ball.r/2){
-       ball.dx=-ball.dx-0.5;       
+       ball.dx=-ball.dx-0.5;  
    }
   if (ball.x-2.5*ball.r/2< 0){
   if (ball.y >= paddle1Y&& ball.y <= paddle1Y + paddle1Height) {
@@ -157,7 +165,7 @@ function move(){
     navigator.vibrate(100);
   }
 }
-if(pcscore ==4){
+if(pcscore == 4){
     fill("#FFA500");
     stroke(0)
     rect(0,0,width,height-1);
@@ -166,8 +174,8 @@ if(pcscore ==4){
     textSize(25)
     text("Game Over!😢😢",width/2,height/2);
     
-    text("Reload The Page To play again !",width/2,height/2+30)
-    window.alert("Game Over!😢😢 Reload The Page To play again !")
+    text("Press restart to play again !",width/2,height/2+30)
+    window.alert("Game Over!😢😢 Press restart To play again !")
     noLoop();
     pcscore = 0;
 }
